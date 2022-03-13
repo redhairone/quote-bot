@@ -6,4 +6,19 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-serenity = "0.10"
+tokio = { version = "1.17.0", features = ["full"] }
+sqlx = { version = "0.5.7", features = ["runtime-tokio-rustls", "sqlite", "offline"] }
+
+[dependencies.serenity]
+default-features = false
+features = [
+    "builder",
+    "client",
+    "gateway",
+    "http",
+    "model",
+    "utils",
+    "rustls_backend",
+    "cache",
+]
+version = "0.10"
