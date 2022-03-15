@@ -1,5 +1,5 @@
 [package]
-name = "mana-quotes-bot"
+name = "quotes-bot"
 version = "0.1.0"
 edition = "2021"
 
@@ -22,3 +22,12 @@ features = [
     "cache",
 ]
 version = "0.10"
+
+[profile.dev]
+incremental = true
+
+[profile.dev.package.sqlx-macros]
+opt-level = 3
+
+[profile.release]
+lto = true
