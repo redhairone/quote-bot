@@ -1,4 +1,5 @@
 -- Add migration script here
-CREATE TABLE quotes (
-    quote TEXT NOT NULL
+CREATE TABLE Quotes (
+    ID int NOT NULL PRIMARY KEY,
+    Quote TEXT NOT NULL
 )
